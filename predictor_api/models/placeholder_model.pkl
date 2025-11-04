@@ -1,0 +1,20 @@
+# Placeholder Model File
+# This is a placeholder file. Replace this with your trained model.
+# In production:
+# 1. Train your model using scikit-learn or xgboost
+# 2. Save the model using joblib or pickle
+# 3. Replace this file with the actual model file
+#
+# Example:
+# import joblib
+# joblib.dump(model, 'placeholder_model.pkl')
+
+"""
+Model Training Steps:
+1. Collect and preprocess resume data
+2. Engineer features (CGPA, internships, projects, skills, etc.)
+3. Train a classification model (Random Forest, XGBoost, etc.)
+4. Evaluate model performance
+5. Save the trained model
+6. Replace this placeholder file
+"""

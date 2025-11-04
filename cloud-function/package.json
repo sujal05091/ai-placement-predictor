@@ -1,0 +1,24 @@
+{
+  "name": "ai-placement-firestore-sync",
+  "version": "1.0.0",
+  "description": "Google Cloud Function to sync Google Sheets data to Firestore",
+  "main": "index.js",
+  "engines": {
+    "node": "18"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@google-cloud/firestore": "^7.1.0",
+    "cors": "^2.8.5"
+  },
+  "keywords": [
+    "google-cloud-function",
+    "firestore",
+    "google-sheets",
+    "real-time-sync"
+  ],
+  "author": "AI Placement Predictor Team",
+  "license": "MIT"
+}
