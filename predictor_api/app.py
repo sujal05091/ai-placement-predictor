@@ -1,12 +1,13 @@
 # Flask API for Resume Analysis and Placement Prediction
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 import PyPDF2
 import io
 import random
 import re
+import os
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='static', static_url_path='')
 CORS(app)  # Enable CORS for all routes
 
 # Mock model and explainer (In production, load your trained model here)
@@ -220,9 +221,10 @@ def determine_track(features, probability):
     else:
         return random.choice(tracks)
 
-@app.route('/')
-def home():
-    """Health check endpoint"""
+# API Routes
+@app.route('/api/status')
+def api_status():
+    """API status endpoint"""
     return jsonify({
         'status': 'online',
         'message': 'AI Placement Predictor API is running',
@@ -438,6 +440,16 @@ def health():
         'model_loaded': True,
         'explainer_loaded': True
     })
+
+# Serve React App (for production deployment)
+@app.route('/', defaults={'path': ''})
+@app.route('/<path:path>')
+def serve(path):
+    """Serve React frontend"""
+    if path != "" and os.path.exists(os.path.join(app.static_folder, path)):
+        return send_from_directory(app.static_folder, path)
+    else:
+        return send_from_directory(app.static_folder, 'index.html')
 
 if __name__ == '__main__':
     # Run the Flask app

@@ -1,0 +1,53 @@
+# Node modules
+frontend/node_modules
+node_modules
+
+# Python cache
+**/__pycache__
+**/*.pyc
+**/*.pyo
+**/*.pyd
+.Python
+*.so
+
+# Environment files
+.env
+.env.local
+.env.*.local
+**/.env
+
+# Git
+.git
+.gitignore
+
+# IDEs
+.vscode
+.idea
+*.swp
+*.swo
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Build artifacts
+frontend/dist
+frontend/build
+*.log
+
+# Test files
+**/test_*
+**/*_test.py
+**/tests/
+
+# Documentation
+README.md
+docs/
+
+# CI/CD
+.github
+.gitlab-ci.yml
+
+# Misc
+*.md
+LICENSE
