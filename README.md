@@ -297,7 +297,10 @@ This project is licensed under the MIT License.
 
 ## 👥 Authors
 
-- Your Name - Initial work
+- sujal s kumar
+- shraddha s poojary
+- Shashank s
+- anusha naik
 
 ## 🙏 Acknowledgments
 
@@ -311,7 +314,7 @@ This project is licensed under the MIT License.
 
 For issues and questions:
 - Create an issue on GitHub
-- Email: your-email@example.com
+- Email: your- sujaludupi@gmail.com.com
 
 ## 🎯 Future Enhancements
 
